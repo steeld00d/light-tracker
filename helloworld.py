@@ -5,7 +5,7 @@ urls = (
     )
 
 class index:
-    def GET(self, name):
+    def GET(name):
       return "Hello, World"
 
 if __name__ == '__main__':
