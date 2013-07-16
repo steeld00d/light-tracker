@@ -1,1 +1,1 @@
-web: python helloworld.py $path
+web: python helloworld.py ${PORT}
