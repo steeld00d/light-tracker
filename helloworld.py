@@ -1,4 +1,4 @@
-import web
+import web, webbrowser, multiprocessing
 
 urls = (
           '/', 'index'
@@ -8,5 +8,7 @@ class index:
     def GET(self, name):
       return "Hello, World"
 
-app = web.application(urls, globals())
-application = app.wsgifunc()
+if __name__ == '__main__':
+    app = web.application(urls, globals())
+    multiprocessing.Process(target=app.run).start()
+    webbrowser.open_new_tab("http://0.0.0.0:8080/")
